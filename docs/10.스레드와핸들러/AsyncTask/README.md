@@ -2,8 +2,8 @@
 
 ## 목차
 
-- AsyncTask 구조
-- AsyncTask 제약사항
+- [AsyncTask 구조](#AsyncTask-구조)
+- [AsyncTask 제약사항](#AsyncTask-제약사항)
 
 ## AsyncTask 구조
 
@@ -74,5 +74,13 @@ AsyncTask는 **비동기 처리를 할 수 있도록 스레드와 핸들러 기�
 
 - 한번 실행한 AsyncTask는 재사용할 수 없고 다시 생성해야 합니다.
 - AsyncTask를 사용해서 스케줄링 할 수 있는 작업수의 한계를 가지고 있습니다.
-- 안드로이드 버전 별 병렬 처리 도앚ㄱ이 다르므로 허니콤 이후 버전에서 멀티 스레드 작업을 원한다면
-  AysyncTask를 시랳ㅇ할때 AsyncTask.THREAD_POOL_EXECUTOR 스케줄러를 지정해야 합니다.
+- 안드로이드 버전 별 병렬 처리 동작이 다르므로 허니콤 이후 버전에서 멀티 스레드 작업을 원한다면
+  AysyncTask를 실행할때 AsyncTask.THREAD_POOL_EXECUTOR 스케줄러를 지정해야 합니다.
+
+## 미니 퀴즈
+
+1. 순차적으로 작업을 처리하는 작업 모델은 무엇인가요? : 동기식 처리 모델
+2. AsyncTask가 작업을 시작하면 호출되고 백그라운드 스레드에서 스레드에서 동작하는 메서드는 무엇인가요?
+    - doInBackground() 메서드
+3. 개수를 정해지지 않았으며 여러 개를 전달할 수 있는 인자는 무엇일까요?
+    - 가변인자(vararg)
